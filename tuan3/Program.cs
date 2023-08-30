@@ -10,6 +10,25 @@ namespace tuan3
     {
         static void Main(string[] args)
         {
+            HangThucPham tp = new HangThucPham();
+            int a;
+            Console.WriteLine("Nhap so luong thuc pham: ");
+            a = Int32.Parse(Console.ReadLine());
+            HangThucPham[] arr = new HangThucPham[a];
+            for (int i = 0; i < a; i++)
+            {
+                HangThucPham t = new HangThucPham();
+                t.nhap(t);
+                arr[i] = t;
+
+            }
+            tp.x();
+            for (int i = 0; i < a; i++)
+            {
+                arr[i].xuat();
+            }
+
+            Console.ReadLine();
         }
     }
 }
